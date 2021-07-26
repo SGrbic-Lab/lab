@@ -5,19 +5,60 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
 * {
   box-sizing: border-box;
 }
 
+
+
+
+
+cursor
+div {width:900px;cursor:url(smiley.gif),url(myBall.cur),auto;}
+
 .container {
   position: relative;
   width: 100%;
+
+
+
 }
 
 .image {
   display: block;
   width: 100%;
   height: auto;
+  border-bottom-right-radius: 50%;
+
+
+
 }
 
 .overlay {
@@ -31,10 +72,12 @@
   opacity: 0;
   transition: .5s ease;
   background-color: blue/*#008CBA;*/
+
 }
 
 .container:hover .overlay {
   opacity: 1;
+  border-bottom-right-radius: 50%;
 }
 
 .text {
@@ -177,7 +220,7 @@ body {
 </head>
 
 <div class="container">
-  <img src="rack.JPG" alt="Avatar" class="image"style="width:1330px; height:260px; box-shadow: 0 17px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:-7px;margin-left:-5px">
+  <img src="rack.JPG" alt="Avatar" class="image"style="width:1330px; height:260px; box-shadow: 0 17px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:-7px;margin-left:-5px";border-bottom-right-radius: 50%; >
   <div class="overlay">
     <div class="text">My home lab<br>Contact:stankogrbich@gmail.com</div>
   </div>
@@ -223,8 +266,10 @@ body {
   <h2>Toplogy</h2>
 </header>
 
+<div class="handclass">
+<img src="lab2.JPG" alt="HTML5 Icon" style="width:13280px;height:600px;">
+</div>
 
-<img src="lab1.JPG" alt="HTML5 Icon" style="width:13280px;height:600px;">
 
 <section>
 
@@ -336,6 +381,10 @@ This way any user can access ERPnext without entering port number in URL.</p>
 <footer>
   <p>Contact: Stankogrbich@gmail.com</p>
 </footer>
+
+
+
+
 
 </body>
 </html>
