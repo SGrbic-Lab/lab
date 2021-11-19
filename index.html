@@ -397,9 +397,20 @@ This way any user can access ERPnext without entering port number in URL.</p>
 
 <hr>
 
-<h1>Ansible for web application deployment</h1>
+<h1>Ansible lab - deployment of web application</h1>
+ 
+This is a simple lab in wich ansible is used for deployment of web aplication on multiple linux servers
+The web app is created using Python, Flask and MySQL. Here is the playbook that I used: 
 
 
+This playbook installs, configures and starts web application. For this playbook to work host key checking in /etc/ansible/ansible.cfg
+must be enabled and hostname resolution for target devices must be created.
+
+
+
+Lab setup:
+Three linux virtual machines are installed on top of windows host: Database and webserver1 Database and webserver2 and Ansible controler
+Ansible playbook and Inventory are writen in Visual Studio Code on host windows PC and through SFTP conection deployed into Ansible controler VM from where I run them.
 
 
 
