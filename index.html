@@ -385,9 +385,7 @@ This way any user can access ERPnext without entering port number in URL.</p>
   </article>
 </section>
 
-<footer>
-  <p>Contact: Stankogrbich@gmail.com</p>
-</footer>
+ 
 
 
 <a title="Real Time Web Analytics" href="http://clicky.com/101339562"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
@@ -410,17 +408,17 @@ The web app is created using Python, Flask and MySQL. Here is the playbook that 
 </div>
 <br>
 <br>
-This playbook installs, configures and starts web application. For this playbook to work host key checking in /etc/ansible/ansible.cfg
-must be enabled and hostname resolution for target devices must be created.
+This playbook installs, configures and start the web application. For this playbook to work host key checking in /etc./Ansible/ansible.cfg must be enabled, and hostname resolution for target devices must be created.
 <br>
 <br>
 
 Lab setup:
-Three linux virtual machines are installed on top of windows host: Database and webserver1 Database and webserver2 and Ansible controler
-Ansible playbook and Inventory are writen in Visual Studio Code on host windows PC and through SFTP conection deployed into Ansible controler VM from where I run them.
+Three Linux virtual machines are installed on top of windows host: Database and webserver1 Database and webserver2 and Ansible controller
+Ansible playbook and Inventory are written in Visual Studio Code on host, windows PC and through SFTP connection deployed into Ansible controller VM from where I run them.
 <br>
 <br>
 <img src="Ansible for web apps.jpg" alt="HTML5 Icon" style="width:841.2px;height:619.2px;">
 
+After running the playbook everything is successfully installed and web application can be accessed through a browser on a port 5000
 </body>
 </html>
