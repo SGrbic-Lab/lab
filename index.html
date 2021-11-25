@@ -426,7 +426,7 @@ Ansible playbook and Inventory are written in Visual Studio Code on host, window
 After running the playbook everything is successfully installed and web application can be accessed through a browser on a port 5000.
 <br>
 <br>
-
+<br>
 <hr>
 <br>
 <br>
@@ -434,6 +434,7 @@ After running the playbook everything is successfully installed and web applicat
 <br>
 <br>
 In this lab two Cisco routers are beeing configured using ansible. Configured routers are two CSR1000s avalible on Cisco Devnet website and accesible through SSH conection. Configured routers can be found on this link:
+https://devnetsandbox.cisco.com/RM/Topology
 <br>
 <br>
 
@@ -441,11 +442,11 @@ Here are the steps:
 <br>
 1. Installing anslible on Linux Centos
 <br>
-2. Enabling host key Auth in conf/etc./file
+2. Enabling host key checking in /etc./Ansible/ansible.cfg
 <br>
 3. Establishing ssh connection between Linux PC and routers
 <br>
-4. Creating amiable playbook and inventory
+4. Creating ansible playbook and inventory
 <br>
 5. Running the playbook to configure the routers
 <br>
@@ -461,7 +462,7 @@ Here are the steps:
 <p><i>Playbook:</i></p>
 <img src="CiscoPlaybook.png" alt="HTML5 Icon">
 <br>
-This playbook will configure loopback and banners on all hosts
+This playbook will configure loopback and banners on all hosts.
 <br>
 <br>
 <p><i>Ansible output:</i></p>
