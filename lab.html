@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+cursor
+div {width:900px;cursor:url(smiley.gif),url(myBall.cur),auto;}
+
+.container {
+  position: relative;
+  width: 100%;
+
+
+
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom-right-radius: 50%;
+
+
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: blue/*#008CBA;*/
+
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  border-bottom-right-radius: 50%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color:  blue;
+  padding: .2px;
+  text-align: center;
+  font-size: 11px;
+  color: white;
+}
+
+
+.image1 { /* Ovde je moja slika */
+ vertical-align: table;
+ border-radius: 80px;
+ background: url(paper.gif);
+ background-position: left top;
+ background-repeat: repeat;
+ padding: 2px;
+ width: 310px;
+ height: 1150px;
+}
+
+
+
+
+.centered {
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  style="font-size:40000%;"
+}
+
+#imggame {
+  border:  5px solid #EEEEEE;
+  padding: 11px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+img{
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+
+
+
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.img-wrap{
+  float:left;
+  width:20%;
+  margin-right:2%;
+}
+.desc{
+  float:right;
+  width:75%;
+}
+.desc p{
+  margin-top:0;
+}
+.clear{
+  clear:both;
+}
+
+/*
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}*/
+
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: left;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+body {
+  background-color: #F8F9F9;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+#Ansible1 {
+  height: 00px;
+  background-color:white;
+}
+
+#ansible2 {
+  height: 0px;
+  background-color: white;
+}
+
+
+
+</style>
+
+
+
+</head>
+
+<div class="container">
+  <img src="rack.JPG" alt="Avatar" class="image"style="width:1330px; height:260px; box-shadow: 0 17px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:-7px;margin-left:-5px";border-bottom-right-radius: 50%; >
+  <div class="overlay">
+    <div class="text">My home lab<br>Contact:stankogrbich@gmail.com</div>
+  </div>
+</div>
+
+<!--
+<body>
+<div class="container">
+    <img src="rack.JPG" class="image2" style="width:1330px; height:250px; box-shadow: 0 17px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:-7px;margin-left:-5px">
+      <div class="centered"><p style="color:white;font-size:160%;font-family:cursive;font-size: 60px">My Home lab</p></div>
+</div>
+<br>
+-->
+
+<div id="imggame">
+  <div class="img-wrap">
+    <img src="1.JPG" class="image1" style="width:180px;height:180px;" width="220px" height="220px" alt="" />
+  </div>
+  <div class="desc">
+
+
+
+<br>
+<br>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+
+<p>Hi, I have built this website in order to document all of my hands on IT experience. Most of the things that I was able to configure on virtual machines, network emulators and real hardwere is documented here. This way any potential employer can have a better understanding of my skill level. I update this website on average once a month.</p>
+<p>This is one of my practice labs built with virtual box VMs and GNS3 emulator. It consists of two network segments a DMZ network subnet with web servers and internal office subnet with windows client - server configuration. For switching I have used Cisco IOU L2 images. All machines in this lab are created in virtual box as VMs and then imported in GNS3. </p>
+
+
+
+  </div>
+  <div class="clear"></div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<p> Here is the list of labs:</p>
+<br>
+<a href="#ansible1">Ansible lab - deployment of web application</a>
+<br>
+<br>
+<a href="#ansible2">Ansible lab - configuring Cisco routers</a>
+<br>
+<br>
+<header>
+  <h2>Toplogy</h2>
+</header>
+
+<div class="handclass">
+<img src="The main.png" alt="HTML5 Icon" style="width:13280px;height:600px;">
+</div>
+
+
+<section>
+
+
+  <article>
+    <br>
+    <br>
+<br>
+<br>
+  <h1>1. Networking</h1>
+  <p>1.1 Pfsense</p>
+  <p>1.1.1 Firewall rules for DMZ network</p>
+  <p>Port forwarding rules for Apache web servers >> ports 22 for SSH and 80 for web server opened and pointing to 192.168.1.5 and 192.168.1.6</p>
+  <p>Port forwarding rules for Windows IIS web server >> port 80 pointing to the IP address of IIS web servers</p>
+  <p>Port forwarding rules for Node js. web server >> port 80 (redirected to port 3000 on which node js. app is running) pointing to 192.168.1.3</p>
+<br>
+<br>
+  1.1.2 Firewall rules for internal network</p>
+  <p>Port forwarding rules for Windows VPN server >> port 1723 to 192.168.1.2 (Double port forward)</p>
+  <p>Port forwarding rules for Windows RDP server >> port 3389 to 192.168.1.2 (Double port forward)</p>
+  <br>
+  <br>
+  <p>1.1.3 Packages and services installed on pfsense</p>
+  <p>OpenVPN Client Export - Generates pre-configured OpenVPN configuration files for clients</p>
+  <p>Services - load balancer for apache  server pool</p>
+  <p>Suricata - network IDS/IPS and security monitoring engine</p>
+  <p>Syslog - ng-syslog server which supports TCP and TLS encryption</p>
+  <p>Arpwatch - Monitors devices on directly attached networks and notifies when it detects new MAC addresses</p>
+  <p>Bandwidthd - Tracks TCP/IP network usage and creates graphs of data consumption for individual IP addresses</p>
+  <p>Darkstat - A network statistics gatherer that offers bandwidth graphs for an interface, as well as traffic to/from specific IP addresses</p>
+  <p>Iperf - A tool for testing network throughput, loss, and jitter</p>
+  <p>Nmap - A utility for network exploration and security auditing.</p>
+  <p>PfBlockerNG - Utility for controlling connections through the firewall based on more general criteria than firewall rules (e.g. by country, by domain name, etc)</p>
+  <p>Status Traffic Totals - Calculates a total amount of traffic passed In/Out over the period of hours, days, and months.</p>
+  <p>Snort - An open source network intrusion detection and prevention system (IDS/IPS)</p>
+  <br>
+  <br>
+  <p>1.2 MikroTik RouterOS</p>
+  <p>1.2.1 Firewall rules for internal network</p>
+  <p>Port forwarding for Windows VPN server >> port 1723 to IP 192.168.2.4</p>
+  <p>Port forwarding for Windows RDP server >> port 3389 to IP 192.168.2.2</p>
+  <br>
+  <br>
+  <h1>2. Windows server configurations</h1>
+  <p>IIS web server with wordpress installed. Ports 80 and 443 are opened for inbound web traffic</p>
+  <p>Windows VPN server behind two firewalls. Port 1723 opened for PPTP VPN</p>
+  <p>Windows RDP server behind two firewalls. port 3389 opened for RDP connections</p>
+  <p>Hyper V server with ERPnext application installed on Linux VM. For security reasons this server is in difrent VLAN then the rest of subnet</p>
+  <p>Wsus, DC, DNS, DHCP, Active directory, file server</p>
+  <br>
+  <br>
+  <h1>3. Linux server configurations</h1>
+  <p>3.1. Linux Ubuntu with MEAN (MongoDB, Expressjs, AngularJs, NodeJS) stack installed. Node js app is running on port 3000 any http request that comes to firewall at the port 80 is being redirected directly from firewall to port 3000 on the node js server. Alternatively, instead of redirecting ports on firewall IPtables or NGNIX can be installed on node server and used for port forwarding of http requests that comes on port 80 to port 3000 on which node js app is running. In order for a node js server to be accessible from the internet inbound firewall rule must be created in IP tables to allow all incoming connections on port 3000. OpenSSH server is installed for remote conections and port 22 is opened.</p>
+  <p>3.2. Kali linux VM installed on sysadmins pc for the purpose of vulnerability scanning(OpenVAS),network discovery and security auditing(NMAP), to detect and exploit SQL injection flaws(sqlmap),network troubleshooting(wireshark),WPScan for WordPress vulnerability scanning and metasploit to exploit active directory vulnerabilities</p>
+  <p>3.3. Two cloned Linux Ubuntu web servers with wordpress installed on LAMP(Linux, Apache, MySQL,PHP) stack.
+  Ports 80 and 443 opend for web traffic and port 22 for SSH conections. This two linux machines are behind load balancer instaled on Pfsense. OpenSSH server is installed for remote conections</p>
+  <p>3.4. Zabbix network monitoring tool. Zabbix is installed on linux ubuntu virtual machine for network monitoring. This VM needs to have bridge adapter. This will allow Zabix to access local LAN resources
+Zabbix allows real-time monitoring of metrics collected from servers, virtual machines, network devices, and web applications.
+To collect server metrics, zabix uses agents on the monitored clients to gather data and send it to the Zabbix server.
+Computer that will run Zabbix server needs Apache to serve the web interface, MySQL database to record monitoring data, and PHP.</p>
+<p>3.5. Linux Ubuntu virtual machine with ERPnext aplication
+ERPNext is a free, open-source ERP system written using Frappe framework – a full-stack web app framework in Python & JavaScript  with MariaDB as the database
+By default ERPnext is installed on port 8000. By using Nginx as a web proxy all traffic from port 8000 will be redirectd to port 80.
+This way any user can access ERPnext without entering port number in URL.</p>
+
+  <br>
+  <br>
+  <h1>4. Client computer configuration</h1>
+
+  <p>4.1. Group policies created for client PCs:</p>
+  <p>Limited access to Control Panel</p>
+  <p>Limited Access to Command Prompt</p>
+  <p>Disabled Forced System Restarts</p>
+  <p>Disabled USB sticks, DVDs, CDs</p>
+  <p>Restricted Software Installations</p>
+  <p>Disabled Guest Account</p>
+  <p>Disabled OneDrive  </p>
+  <p>Change of desktop wallpapers and lock screen images</p>
+  <p>GPO to manage Google Chrome configuration automatically on all computers in the domain.</p>
+  <p>Deployment of Google Chrome With GPO</p>
+  <p>Deployment of desktop wallpapers and lock screen images</p>
+  <p>OpenVPN client installed for those who work from home</p>
+  <p> 4.2. System administartors PC </p>
+  <p>PuTTY or WSL for SSH conections into linux servers</p>
+  <p>Sysinternals suite to monitor, manage and troubleshoot Windows operating systems</p>
+  <p>Remote Server Administration Tools (RSAT) for managing servers remotely</p>
+  <p>Zabbix VM for network monitoring</p>
+  <p>Kali linux VM for network security adminstartion</p>
+
+<br>
+
+<h1>5. Network storage</h1>
+
+  <p>5.1. FreeNAS configuration</p>
+    <p>Connected to Active directory</p>
+    <p>Link aggregation for increased bandwidth, reliability and availability.</p>
+
+<br>
+<br>
+<br>
+
+
+
+
+
+  </article>
+</section>
+
+
+
+
+<a title="Real Time Web Analytics" href="http://clicky.com/101339562"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+<script async src="//static.getclicky.com/101339562.js"></script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101339562ns.gif" /></p></noscript>
+
+
+<hr>
+
+<div class="main" id="ansible1">
+<h1>Ansible lab - deployment of web application</h1>
+
+
+This is a simple lab in wich ansible is used for deployment of web aplication on multiple linux servers
+The web app is created using Python, Flask and MySQL. Here is the playbook that I used:
+<br>
+<br>
+
+<div>
+<img src="Playbook.jpg" alt="HTML5 Icon" style="width:588px;height:954.4px;">
+</div>
+<br>
+<br>
+This playbook installs, configures and start the web application. For this playbook to work host key checking in /etc./Ansible/ansible.cfg must be enabled, and hostname resolution for target devices must be created.
+<br>
+<br>
+
+Lab setup:
+Three Linux virtual machines are installed on top of windows host: Database and webserver1, Database and webserver2 and Ansible controller.
+Ansible playbook and Inventory are written in Visual Studio Code on host, windows PC and through SFTP connection deployed into Ansible controller VM from where I run them.
+<br>
+<br>
+<p><i>lab toplogy:</i></p>
+<img src="Ansible for web apps.jpg" alt="HTML5 Icon" style="width:673px;height:495.2px;">
+<p><i>Ansible output:</i></p>
+<img src="webapp ansible.png" alt="HTML5 Icon" style="width:466.9px;height:275.1px;">
+<br>
+<br>
+After running the playbook everything is successfully installed and web application can be accessed through a browser on a port 5000.
+</div>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<div class="main" id="ansible2">
+<h1>Ansible lab - configuring Cisco routers</h1>
+<br>
+<br>
+In this lab two Cisco routers are beeing configured using ansible. Configured routers are two CSR1000s avalible on Cisco Devnet website and accesible through SSH conection. Configured routers can be found on this link:
+https://devnetsandbox.cisco.com/RM/Topology
+<br>
+<br>
+
+Here are the steps:
+<br>
+1. Installing anslible on Linux Centos
+<br>
+2. Enabling host key checking in /etc./Ansible/ansible.cfg
+<br>
+3. Establishing ssh connection between Linux PC and routers
+<br>
+4. Creating ansible playbook and inventory
+<br>
+5. Running the playbook to configure the routers
+<br>
+<br>
+<p><i>lab toplogy:</i></p>
+<img src="Topology1.png" alt="HTML5 Icon">
+<br>
+<br>
+<p><i>Inventory:</i></p>
+<img src="Inventory.png" alt="HTML5 Icon">
+<br>
+<br>
+<p><i>Playbook:</i></p>
+<img src="CiscoPlaybook.png" alt="HTML5 Icon">
+<br>
+This playbook will configure loopback and banners on all hosts.
+<br>
+<br>
+<p><i>Ansible output:</i></p>
+<img src="output1.png" alt="HTML5 Icon">
+<br>
+All routers are configured!
+</div>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+</body>
+</html>
