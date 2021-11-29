@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  
 
-  
+
+
+
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-.loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
 }
+
+#myBtn:hover {
+  background-color: #555;
+}
+
 
 /* Safari */
 @-webkit-keyframes spin {
@@ -220,10 +233,29 @@ footer {
 body {
   background-color: #F8F9F9;
 }
-</style>
-  
 
-  
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+#Ansible1 {
+  height: 00px;
+  background-color:white;
+}
+
+#ansible2 {
+  height: 0px;
+  background-color: white;
+}
+
+
+
+</style>
+
+
+
 </head>
 
 <div class="container">
@@ -231,7 +263,7 @@ body {
   <div class="overlay">
     <div class="text">My home lab<br>Contact:stankogrbich@gmail.com</div>
   </div>
-</div> 
+</div>
 
 <!--
 <body>
@@ -253,6 +285,9 @@ body {
 <br>
 <br>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
 
 
 <p>Hi, I have built this website in order to document all of my hands on IT experience. Most of the things that I was able to configure on virtual machines, network emulators and real hardwere is documented here. This way any potential employer can have a better understanding of my skill level. I update this website on average once a month.</p>
@@ -264,11 +299,21 @@ body {
   <div class="clear"></div>
 </div>
 
+
+
 <br>
 <br>
 <br>
 <br>
 
+<p> Here is the list of labs:</p>
+<br>
+<a href="#ansible1">Ansible lab - deployment of web application</a>
+<br>
+<br>
+<a href="#ansible2">Ansible lab - configuring Cisco routers</a>
+<br>
+<br>
 <header>
   <h2>Toplogy</h2>
 </header>
@@ -385,7 +430,7 @@ This way any user can access ERPnext without entering port number in URL.</p>
   </article>
 </section>
 
- 
+
 
 
 <a title="Real Time Web Analytics" href="http://clicky.com/101339562"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
@@ -395,11 +440,12 @@ This way any user can access ERPnext without entering port number in URL.</p>
 
 <hr>
 
+<div class="main" id="ansible1">
 <h1>Ansible lab - deployment of web application</h1>
 
- 
+
 This is a simple lab in wich ansible is used for deployment of web aplication on multiple linux servers
-The web app is created using Python, Flask and MySQL. Here is the playbook that I used: 
+The web app is created using Python, Flask and MySQL. Here is the playbook that I used:
 <br>
 <br>
 
@@ -424,12 +470,14 @@ Ansible playbook and Inventory are written in Visual Studio Code on host, window
 <br>
 <br>
 After running the playbook everything is successfully installed and web application can be accessed through a browser on a port 5000.
+</div>
 <br>
 <br>
 <br>
 <hr>
 <br>
 <br>
+<div class="main" id="ansible2">
 <h1>Ansible lab - configuring Cisco routers</h1>
 <br>
 <br>
@@ -469,6 +517,30 @@ This playbook will configure loopback and banners on all hosts.
 <img src="output1.png" alt="HTML5 Icon">
 <br>
 All routers are configured!
+</div>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 
 </body>
 </html>
