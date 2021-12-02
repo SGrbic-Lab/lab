@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-
+<body style="background-color:white;">
 
 
 <title>CSS Template</title>
@@ -24,12 +24,12 @@
   background-color: blue;
   color: white;
   cursor: pointer;
-  padding: 15px;
+  padding: 23px;
   border-radius: 4px;
 }
 
 #myBtn:hover {
-  background-color: #555;
+  background-color: red;
 }
 
 
@@ -171,15 +171,7 @@ img{
 
 
 
-.loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
-}
+
 
 .img-wrap{
   float:left;
@@ -241,16 +233,19 @@ html {
 
 
 #Ansible1 {
-  height: 00px;
+
   background-color:white;
 }
 
 #ansible2 {
-  height: 00px;
+
   background-color: white;
 }
 
+#DMZ {
 
+  background-color: white;
+}
 
 </style>
 
@@ -288,10 +283,10 @@ html {
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
+<br>
 
+<p>Hi, I have built this website in order to document all of my hands on IT experience. Most of the things that I was able to configure on virtual machines, containers, network emulators and real hardwere is documented here. Im doing this to make my CV more transparent and to give potential employers better understanding of my skill level. I update this website on average once a month.</p>
 
-<p>Hi, I have built this website in order to document all of my hands on IT experience. Most of the things that I was able to configure on virtual machines, network emulators and real hardwere is documented here. This way any potential employer can have a better understanding of my skill level. I update this website on average once a month.</p>
-<p>This is one of my practice labs built with virtual box VMs and GNS3 emulator. It consists of two network segments a DMZ network subnet with web servers and internal office subnet with windows client - server configuration. For switching I have used Cisco IOU L2 images. All machines in this lab are created in virtual box as VMs and then imported in GNS3. </p>
 
 
 
@@ -306,7 +301,10 @@ html {
 <br>
 <br>
 
-<p> Here is the list of labs:</p>
+<b><p> Here is the list of labs:</p></b>
+<br>
+<a href="#DMZ"> Web servers in DMZ + Windows client server network on GNS3 and virtual box</a>
+<br>
 <br>
 <a href="#ansible1">Ansible lab - deployment of web application</a>
 <br>
@@ -314,12 +312,38 @@ html {
 <a href="#ansible2">Ansible lab - configuring Cisco routers</a>
 <br>
 <br>
+<hr>
+<br>
+<div class="main" id="DMZ">
+<h1>Web servers in DMZ + Windows client server network on GNS3 and virtual box</h1>
+
+<p>
+I have build this lab while I was preparing for Cisco networking certification exam. This lab was built with the purpose of better understanding and getting “hands on experience” with port forwarding, port redirecting, port troubleshooting, configuration of firewall services, VPN, SSH and RDP connections, network security, network traffic monitoring and other issues that may occur in a similar environment. </p>
+
+
+<p>
+In this lab, there are two subnets behind the pfsense firewall. One subnet is created for security reasons and it is dedicated for all servers that need to be accesible from the internet (DMZ or demilitarized zone subnet). The other subnet is windows client-server network. </p>
+
+
+<p>
+DMZ network consists of MEAN stack website (MongoDB, Express.js, AngularJS, Node.js) and LAMP web stack (Linux, Apache, MySQL, PHP). Firewall rules are set so that all web servers are accsesible from the internet. </p>
+
+<p>
+The Windows enterprise network consists of windows client server architecture, NAS and application server that must be accessible from the internet for employees working from home. </p>
+
+<p>
+For switching I have used Cisco IOU L2 images. All machines in this lab are created in virtual box as VMs and then imported in GNS3 network emulator</p>
+
+<p>
+More details about device configurations can be seen in text under topology </p>
+
+
 <header>
   <h2>Toplogy</h2>
 </header>
 
 <div class="handclass">
-<img src="The main.png" alt="HTML5 Icon" style="width:13280px;height:600px;">
+<img src="The main.jpg" alt="HTML5 Icon" style="width:13280px;height:600px;">
 </div>
 
 
@@ -422,7 +446,7 @@ This way any user can access ERPnext without entering port number in URL.</p>
 <br>
 <br>
 <br>
-
+</div>
 
 
 
@@ -432,10 +456,6 @@ This way any user can access ERPnext without entering port number in URL.</p>
 
 
 
-
-<a title="Real Time Web Analytics" href="http://clicky.com/101339562"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
-<script async src="//static.getclicky.com/101339562.js"></script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101339562ns.gif" /></p></noscript>
 
 
 <hr>
@@ -448,6 +468,7 @@ This is a simple lab in wich ansible is used for deployment of web aplication on
 The web app is created using Python, Flask and MySQL. Here is the playbook that I used:
 <br>
 <br>
+
 <div>
 <img src="Playbook.jpg" alt="HTML5 Icon" style="width:588px;height:954.4px;">
 </div>
@@ -465,7 +486,7 @@ Ansible playbook and Inventory are written in Visual Studio Code on host, window
 <p><i>lab toplogy:</i></p>
 <img src="Ansible for web apps.jpg" alt="HTML5 Icon" style="width:673px;height:495.2px;">
 <p><i>Ansible output:</i></p>
-<img src="webapp ansible.png" alt="HTML5 Icon" style="width:466.9px;height:275.1px;">
+<img src="webapp ansible.jpg" alt="HTML5 Icon" style="width:466.9px;height:275.1px;">
 <br>
 <br>
 After running the playbook everything is successfully installed and web application can be accessed through a browser on a port 5000.
@@ -499,10 +520,7 @@ Here are the steps:
 <br>
 <br>
 <p><i>lab toplogy:</i></p>
-<img src="Ansible for web apps.jpg" alt="HTML5 Icon" style="width:673px;height:495.2px;">
-<img src="Ansible for web apps.jpg" alt="HTML5 Icon" style="width:673px;height:495.2px;">
-<img src="Playbook.jpg" alt="HTML5 Icon" style="width:588px;height:954.4px;">
-<img src="The main.png" alt="HTML5 Icon" style="width:13280px;height:600px;">
+<img src="CiscoTopolgy.jpg" alt="HTML5 Icon">
 <br>
 <br>
 <p><i>Inventory:</i></p>
@@ -510,7 +528,7 @@ Here are the steps:
 <br>
 <br>
 <p><i>Playbook:</i></p>
-<img src="1.JPG" alt="HTML5 Icon">
+<img src="CiscoPlaybook.jpg" alt="HTML5 Icon">
 <br>
 This playbook will configure loopback and banners on all hosts.
 <br>
@@ -520,8 +538,7 @@ This playbook will configure loopback and banners on all hosts.
 <br>
 All routers are configured!
 </div>
- 
- 
+
 
 <script>
 //Get the button
