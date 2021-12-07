@@ -246,7 +246,13 @@ html {
 
   background-color: white;
 }
+  
+  
+#haproxy {
 
+  background-color: white;
+  
+  
 </style>
 
 
@@ -312,6 +318,11 @@ html {
 <a href="#ansible2">Ansible lab - configuring Cisco routers</a>
 <br>
 <br>
+<a href="#haproxy">Load balancing docker containers with HAproxy</a>
+  <br>
+<br>
+  <br>
+  
 <hr>
 <br>
 <div class="main" id="DMZ">
@@ -538,8 +549,65 @@ This playbook will configure loopback and banners on all hosts.
 <br>
 All routers are configured!
 </div>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+  <hr>
+<div class="main" id="haproxy">
+<h1>Load balancing docker containers with Haproxy</h1>
+<br>
+  <br>
+  <br>
+In this lab I used 3 apache web servers inside docker containers and a Debian host on which Haproxy load balancer is installed. For managing docker containers I use portainer user interface.
+<br>
+<br>
+This is a lab toplogy:
+<br>
 
+<br>
+<br>  
+Here are the steps:
+<br>
+1.	Create 3 httpd docker containers and edit index.html file that is inside /usr/local/apache2/htdocs. New index.html should be “This is a web-server1 on 172.17.0.3” 
+2.	Install HAproxy on debian and configure /etc/host file with host names and IP addresses of backend web servers
+3.	Configure frontend and backend web servers inside of /etc/haproxy/haproxy.cfg file 
+4.	Restart HAproy server and see if load balancing is working
+  <br>
+  <br>
+  <br>
+  
+  
 
+Apache web server confugurations:
+  
+  
+<br>
+<br>
+  
+HAproxy /etc/hosts/ file configuration:
+  
+ <br>
+<br>
+  
+  
+HAproxy.cfg file configuration:
+  
+  <br>
+<br>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 <script>
 //Get the button
 var mybutton = document.getElementById("myBtn");
