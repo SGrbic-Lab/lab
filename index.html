@@ -560,11 +560,13 @@ All routers are configured!
 <br>
   <br>
   <br>
-In this lab I used 3 apache web servers inside docker containers and a Debian host on which Haproxy load balancer is installed. For managing docker containers I use portainer user interface.
+In this lab I used 3 apache web servers inside docker containers and a Debian host on which HAproxy load balancer is installed. For managing docker containers I use portainer user interface.
 <br>
 <br>
 This is a lab toplogy:
 <br>
+  <br>
+  
  <img src="HAproxyLAB.JPG" alt="HTML5 Icon">
 <br>
 <br>  
@@ -572,10 +574,13 @@ Here are the steps:
 <br>
 1.	Create 3 httpd docker containers and edit index.html file that is inside /usr/local/apache2/htdocs. New index.html should be “This is a web-server1 on 172.17.0.3” 
   <br>
+  <br>
 2.	Install HAproxy on debian and configure /etc/host file with host names and IP addresses of backend web servers
+  <br>
   <br>
 3.	Configure frontend and backend web servers inside of /etc/haproxy/haproxy.cfg file 
 <br>
+  <br>
 4.	Restart HAproy server and see if load balancing is working
   <br>
   <br>
@@ -585,6 +590,7 @@ Here are the steps:
 
 Apache web server confugurations:
   <br>
+  <br>
   <img src="3containers.JPG" alt="HTML5 Icon">
   
 <br>
@@ -592,12 +598,14 @@ Apache web server confugurations:
   
 HAproxy /etc/hosts/ file configuration:
   <br>
+  <br>
   <img src="etc hosts haproxy.png" alt="HTML5 Icon">
  <br>
 <br>
   
   
 HAproxy.cfg file configuration:
+  <br>
   <br>
   <img src="haproxyCFG.jpg" alt="HTML5 Icon">
   <br>
