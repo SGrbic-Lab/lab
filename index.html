@@ -619,6 +619,68 @@ After everything is configured it is time to make a test and see if load balance
    <br>
   <br>
   <img src="loop.JPG" alt="HTML5 Icon">
+<br>
+<br>
+<br>
+<br>
+<br>
+  <hr>
+<div class="main" id="failover cluster">
+  <h1>Configuring windows server failover cluster</h1>
+  <br>
+    <br>
+    <br>
+Hi, in this lab I will configure windows server failover cluster.
+First step is to configure iSCSI shared storage server.
+All nodes that are a part of a failover cluster need to have an access to the shared storage server.
+Here is a short list of all steps that need to be done before a failover cluster can be configured:
+<br>
+<br>
+1. Add storage server and all other servers in an active directory domain
+<br>
+2. Install iSCSI target on a shared storage server
+<br>
+3. Install iSCSI initiators on servers that will be a part of a cluster
+<br>
+4. Connect iSCSI initiators with iSCSI target
+<br>
+<br>
+After all this is done shared storage should be available to all nodes in a failover cluster.
+Now I can start configuring failover cluster.
+<br>
+<br>
+This is a lab topology:
+<br>
+<br>
+ <img src="top.JPG" alt="HTML5 Icon">
+<br>
+<br>
+first install failover cluster feature on bouth nodes
+<br>
+<br>
+ <img src="1a.JPG" alt="HTML5 Icon">
+ <br>
+ <br>
+ After instalation on the node one open a failover cluster manager and validate configuration. first choose devices that will be inside of a cluster
+ and then run validation
+ <br>
+ <br>
+ <img src="1.JPG" alt="HTML5 Icon">
+ <br>
+ <br>
+ After validation im geting some warnings. This doesnt prevent further configuration
+ <br>
+ <br>
+ <img src="4.JPG" alt="HTML5 Icon">
+ <br>
+ <br>
+ Now I can create a cluster. On failover cluster manager choose "create new cluster" and choose the name and nodes that will be inside of a cluster.
+ After configuration new cluster object should be avalible in active directory users and computers.
+<br>
+<br>
+<img src="6.JPG" alt="HTML5 Icon">
+<br>
+<br>
 
   
   
