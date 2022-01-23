@@ -687,7 +687,43 @@ first install failover cluster feature on bouth nodes
 <br>
 <br>
 <img src="6.JPG" alt="HTML5 Icon">
-  
+<br>
+<br>
+<br>
+<br>
+<br>
+  <hr>
+<div class="main" id="failover cluster">
+  <h1>Configuring a two-node clustered file server</h1>
+  <br>
+    <br>
+    <br>
+Hi, In this lab I will configure a high avalible file server. This lab is a continuatin on the previus failover cluster configuration. Here are the steps
+First step is click on roole and choose a file server and click on "file server for general use" 
+<br>
+<br>
+ <img src="roles.JPG" alt="HTML5 Icon">
+<br>
+<br>
+Now assign an IP address and name of the file server cluster and choose storage disk on wich data will be stored. In my case name is test.stanko.com and IP
+address is 192.168.0.69
+<br>
+All configuration details can bee seen on the next imige. File server should now be up and runing. Also inside users and computers there should be a new compu
+ter account with the name of file server role in my case that is test.stanko.com
+<img src="confirm2.JPG" alt="HTML5 Icon">
+<br>
+In the next step I will create file shares for end users. Click add file share 
+<img src="add.JPG" alt="HTML5 Icon">
+<br>
+Now choose SMB share quick
+<img src="SMB.JPG" alt="HTML5 Icon">
+<br>
+<img src="ShareName.JPG" alt="HTML5 Icon">
+ 
+Now to see if shared folder is created I will go to client computer and from there I will try to access shared folder
+<img src="run.JPG" alt="HTML5 Icon">
+Shared folder created on failover cluster is avalible
+
   
   
   
