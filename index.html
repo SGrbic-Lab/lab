@@ -776,16 +776,17 @@ Shared folder is created on failover cluster and avalible
 <br>
 <hr>
 <div class="main" id="NLB">
-<h1>network load balancing iis servers</h1>
+<h1>network load balancing IIS web servers</h1>
 <br>
 <br>
-Hi, In this example I will configure network load balancing on windows server. I used two IIS webservers and on each I will configure a simple webisite just 
+Hi, In this example I will configure network load balancing on windows server. I used two IIS web servers and on each I will configure a simple webisite just 
 to see if load balancing is working. On server 192.168.0.109 website will be in red and on the 192.168.0.109 in blue.
 <br>
 <br>
 <p><i>Lab topology</i></p>
 <br>
 <img src="toplogy.JPG" alt="HTML5 Icon">
+<br>
 <br>
 Here are the steps: 
 <br>
@@ -799,7 +800,12 @@ Here are the steps:
 4. Test to see if network load balancing is working
 <br>
 <br>
-
+After installation of IIS web server role and network loadbalancing role Next steep is to create a load balancig cluster. This cluster will be configured on 192.168.0.108
+server. To create a NLB cluster first open network load balancing manager then open "new cluster" option, choose Servers that will be a part of the cluster and give them priority. 
+Name of the cluster will be NLB, IP adress will be 192.168.0.101 and since im using virtual machines with multiple NICs I will choose multicast for the 
+cluster oiperation mode
+<br>
+<br>
 <img src="toplogy.JPG" alt="HTML5 Icon">
 <br>
 <br>
