@@ -776,10 +776,29 @@ Shared folder is created on failover cluster and avalible
 <br>
 <hr>
 <div class="main" id="NLB">
-<h1>Network loadbalancing IIS webservers</h1>
+<h1>network load balancing iis servers</h1>
 <br>
 <br>
+Hi, In this example I will configure network load balancing on windows server. I used two IIS webservers and on each I will configure a simple webisite just 
+to see if load balancing is working. On server 192.168.0.109 website will be in red and on the 192.168.0.109 in blue.
 <br>
+<br>
+<p><i>Lab topology</i></p>
+<br>
+<br>
+Here are the steps: 
+<br>
+<br>
+1. Install IIS web server on both nodes and insert .html document inside C:\inetpub\wwwroot
+<br>
+2. Install network load balancing feature on both nodes
+<br>
+3. Create network load balancing cluster 
+<br>
+4. Test to see if network load balancing is working
+<br>
+<br>
+
 <img src="toplogy.JPG" alt="HTML5 Icon">
 <br>
 <br>
